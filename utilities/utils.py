@@ -16,7 +16,6 @@ class Util:
             return NaN_features
 
         def contains_NaN(dataframe, column) -> bool:
-            dataframe.dropna(eaf)
             try:
                 return dataframe[column].isnull().values.any()
             except:
@@ -27,3 +26,4 @@ class Util:
         def get_min_max(x: float, min_x: float, max_x: float) -> float:
             normalized_x = (x - min_x) / (max_x - min_x)
             return normalized_x
+        
